@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="12;url=https://suda.33ka.cn" />
+<meta http-equiv="refresh" content="12;url=http://suda.33ka.cn" />
 <meta name="renderer" content="webkit">
 <meta content="always" name="referrer">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -40,7 +40,19 @@
 	<!---->
 </div>
 <script type="text/javascript">
-eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('0 3=8.a("b");0 i=5;0 6=7(2(){i--;3.9=i;m(i==1){4.d.e="//f.g.h"}},j);2 k(){4.l.c(-1)}',23,23,'var||function|sec|window|12|timer|setInterval|document|innerHTML|getElementById|second|go|location|href|suda|33ka|cn||1000|goBack|history|if'.split('|'),0,{}))
+var sec = document.getElementById("second");
+var i = 12;
+var timer = setInterval(function() {
+	i--;
+	sec.innerHTML = i;
+	if (i == 1) {
+		window.location.href = "http://suda.33ka.cn/"
+	}
+}, 1000);
+
+function goBack() {
+	window.history.go(-1)
+}
 </script>
 </body>
 </html>
