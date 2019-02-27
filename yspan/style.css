@@ -2,7 +2,7 @@
 
 body {
 	background-color: #000!important;
-	background-image: url(bg.jpg);
+	background-image: url(bj.jpg);
 	background-repeat: repeat
 }
 
@@ -316,7 +316,7 @@ body table[style*="margin-top"] tbody tr td:nth-child(2) {
 }
 
 #sipt1,#shtm1 {
-	background: #0030ce url("zbobj2.jpg") repeat-x 0 0!important;
+	background: #0030ce url("bj.jpg") repeat-x 0 0!important;
 	border-color: #0030ce!important
 }
 
