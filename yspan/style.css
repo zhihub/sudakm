@@ -6,6 +6,17 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(//sudakm.com/yspan/img/bg1.png);
 }
 
+.fgg5 .ta_wjq ｛
+    display: none;
+    height: 44px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    background: transparent url(//exp.bdstatic.com/static/article/widget/top-nav-bar/img/top-nav-bg_a47c4ce.png) 0 0 repeat-x;
+｝
+
 .ta_wjq ｛
     display: none;
     height: 44px;
