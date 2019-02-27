@@ -1,18 +1,366 @@
-.fgg5 #idtop {
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(//sudakm.com/yspan/img/bg1.png);
+@charset "utf-8";
+
+body {
+	background-color: #000!important;
+	background-image: url(bg.jpg);
+	background-repeat: repeat
 }
 
-#menuList .ml {
-    font-size: 15px !important;
-}
-#menuList .ml {
-    text-shadow: rgb(0, 0, 0) 0px 0px 4px, rgb(0, 0, 0) 0px 0px 3px, rgb(0, 0, 0) 0px 0px 2px, rgb(0, 0, 0) 0px 0px 1px;
-    color: rgb(255, 255, 255) !important;
+body table[style*="margin-top"] {
+	position: relative
 }
 
-#menuList li.gml img.bjtb, a.ml, #menuList li.gml label {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 26px;
-    padding: 3px;
+body table[style*="margin-top"] tbody {
+	position: absolute;
+	top: -8px;
+	left: 0
+}
+
+body table[style*="margin-top"] tbody tr td:nth-child(2) {
+	width: 4096px
+}
+
+#kj_right {
+	margin-top: 3px;
+	padding-bottom: 8px;
+	background-size: 100%
+}
+
+.ta_wjq,#ysmenu div,#ysmenu1,.lynrc {
+	text-shadow: #0a0a09 1px 1px 1px
+}
+
+.ystop H1 {
+	display: none
+}
+
+.tdtop {
+	border-bottom: none!important
+}
+
+.ystop {
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-color: #000!important;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	opacity: 0;
+	-webkit-background-size: 100% 100%;
+	height: 190px;
+	background-image: url(top.jpg)
+}
+
+.ystop #sylj {
+	margin-top: 165px!important;
+	text-align: center
+}
+
+.ystop #sylj A {
+	display: inline-block;
+	padding: 2px;
+	color: #FFF;
+	text-shadow: 1px 1px 1px #000,-1px -1px 1px #000
+}
+
+.gml img:first-child {
+	display: none
+}
+
+.menu img:first-child {
+	display: inline-block;
+	margin-top: 3px
+}
+
+#menuList li.gml {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC!important;
+	padding-left: 8px
+}
+
+#menuList li.gml img.bjtb,a.ml,#menuList li.gml label {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 26px;
+	padding: 3px
+}
+
+#menuList ul img,#menuList ul label {
+	vertical-align: text-bottom!important;
+	line-height: normal!important;
+	padding: 1.5px!important
+}
+
+#menuList li img {
+	height: 24px!important;
+	width: 24px!important
+}
+
+#menuList ul img {
+	height: 16px!important;
+	width: 16px!important
+}
+
+#menuList ul img[src*="mll1"] {
+	height: 20px!important;
+	width: 20px!important
+}
+
+#menuList li img {
+	vertical-align: text-bottom;
+	padding-right: 3px;
+	padding-left: 3px
+}
+
+.ta_wjq {
+	min-width: 700px;
+	width: 100%;
+	min-height: 24px;
+	line-height: 22px;
+	background-color: #292929!important
+}
+
+#ysmenu div {
+	color: #fff;
+	padding: 3px 9px 1px 9px;
+	margin-top: 3px;
+	background-color: #333
+}
+
+#ysmenu div:hover {
+	color: #b6ff00
+}
+
+#ysmenu div:last-child {
+	width: 56px;
+	padding: 3px 0 1px 0;
+	text-align: center
+}
+
+#ysmenu .dqcd {
+	border-bottom: 1px solid #333;
+	height: 25px;
+	margin-top: 3px;
+	color: #9acd32
+}
+
+#ysmenu1,#ysmenu1 a,.lynrc {
+	background-color: #111!important;
+	color: #bfbfbf
+}
+
+.tx3 {
+	background-color: #e5e8ea!important;
+	color: #000!important;
+	border-radius: 5px;
+	overflow: hidden;
+	border: 1px solid #333!important;
+	padding: 1px
+}
+
+#nr {
+	background-image: url(ly.gif);
+	background-repeat: no-repeat;
+	background-position: center center
+}
+
+.bt2,.BT2,#ysmenu1 button,#glyq2 input,#buyh input {
+	color: #ecefe6;
+	background-color: #333;
+	border-radius: 3px;
+	border: 1px solid #333;
+	height: 20px
+}
+
+.bt2:hover,.BT2:hover,#ysmenu1 button:hover,#glyq2 input:hover,#buyh input:hover {
+	color: #b6ff00;
+	background-color: #444;
+	border-radius: 3px;
+	border: 1px solid #444
+}
+
+.lysm {
+	color: #77a7ff!important
+}
+
+.lynr {
+	color: #fefffd!important;
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+.lynrc {
+	border: 1px solid #2e2e2e;
+	background-color: #111!important
+}
+
+.lyk label {
+	color: #999
+}
+
+.lyhf {
+	color: #b6ff00!important
+}
+
+.lyk div label:nth-child(2) {
+	display: none
+}
+
+#lynr div:first-child .lynr,#lynr div:first-child .lynr div {
+	color: inherit;
+	animation: change 2s linear 0s infinite
+}
+
+#lynr div:first-child div label {
+	display: none
+}
+
+#lynr div:first-child>div:last-child:before {
+	content: '刚刚 1分钟前';
+	color: #999!important
+}
+
+@keyframes change {
+	1% {
+		color: #ff0
+	}
+
+	50% {
+		color: #0ff
+	}
+
+	100% {
+		color: #0f0
+	}
+}
+
+#dzx {
+	position: relative;
+	border-top-width: 0!important;
+	border-right-width: 0!important;
+	border-bottom-width: 1px;
+	border-left-width: 0!important;
+	border-top-style: none!important;
+	border-right-style: none!important;
+	border-bottom-style: solid;
+	border-left-style: none!important;
+	border-bottom-color: #000
+}
+
+.z_bt,.ckbt {
+	height: 24px;
+	background-color: rgba(41,41,41,0.95)!important;
+	background-image: url(http://zy.cccpan.com/f_zy/tp/ysbt.gif);
+	background-repeat: no-repeat;
+	background-position: 6px 6px;
+	padding-left: 26px;
+	font-weight: bold;
+	font-family: "宋体";
+	font-size: 12px
+}
+
+#idzdy {
+	margin: 2px 2px auto 2px;
+	width: 302px!important;
+	border: 1px solid #292929!important;
+	background-color: rgba(0,0,0,0.4)!important
+}
+
+.z_bo {
+	background-color: rgba(0,0,0,0.4)
+}
+
+.z_bo li,.z_bo font {
+	color: #ff0!important;
+	line-height: 40px;
+	font-family: "宋体"!important;
+	font-size: 14px
+}
+
+.z_bo b {
+	padding: 5px
+}
+
+.z_bo a,.z_bo a:hover {
+	color: #ff1e1e!important;
+	font-size: 14px;
+	padding-left: 20px;
+	background-image: url(http://zy.ys168.com/f_zy/tp/wjlx/url.gif);
+	background-repeat: no-repeat;
+	background-position: 0 center;
+	font-weight: bold
+}
+
+.z_bo img {
+	display: none
+}
+
+.s3 {
+	background: none!important
+}
+
+.s1,.s2,.s3,#sxts a {
+	padding-left: 0!important;
+	background: none!important
+}
+
+#sxts {
+	position: absolute;
+	bottom: 3px;
+	right: 5px
+}
+
+#sipt2,#shtm2,#shtm2 label,#sipt2 label {
+	background-color: transparent!important
+}
+
+#sipt1,#shtm1 {
+	background: #0030ce url("zbobj2.jpg") repeat-x 0 0!important;
+	border-color: #0030ce!important
+}
+
+#sipt4 A.wj {
+	color: black!important
+}
+
+#sipt4 A.wj:hover {
+	color: red!important
+}
+
+#idsyjy {
+	color: #999!important
+}
+
+.lynrc::-webkit-scrollbar {
+	width: 5px;
+	height: 5px
+}
+
+.lynrc::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: #bdbdbd
+}
+
+#dzx::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	background-color: #000;
+	opacity: .7
+}
+
+#dzx::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: #565656
+}
+
+.lynrc,#dzx {
+	scrollbar-3dLight-Color: black;
+	scrollbar-Arrow-Color: white;
+	scrollbar-Base-Color: #2e2e2e;
+	scrollbar-DarkShadow-Color: black;
+	scrollbar-Face-Color: black;
+	scrollbar-Highlight-Color: #2e2e2e;
+	scrollbar-Shadow-Color: #2e2e2e;
+	scrollbar-Track-Color: #383838
 }
