@@ -64,6 +64,8 @@ body, html {
     background: transparent;
     outline: none;
     transition: color .3s ease;
+    font-size: 16px;
+    text-decoration: none;
 }
 
 .dotview-logo .dotview-header-icon[data-v-4d7f73a1] {
@@ -124,6 +126,4 @@ body, html {
     margin-top: 40px;
     cursor: pointer;
     color: #2e68f8;
-    font-size: 16px;
-    text-decoration: none;
 }
