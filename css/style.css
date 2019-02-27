@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+div {
+    display: block;
+}
+
+body, html {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,STHeitiSC-Light,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,SimSun,sans-serif;
+    display: block!important;
+}
+
+#app {
+    font-size: 14px;
+    height: 100%;
+}
+
+.drive-container {
+    overflow: hidden;
+}
+
+.drive-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.drive-dotview-container {
+    height: 100%;
+    background: #fff;
+}
+
+.dotview-header[data-v-4d7f73a1] {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 40px;
+    padding: 0 8px 0 10px;
+    line-height: 40px;
+    z-index: 2;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.dotview-logo[data-v-4d7f73a1] {
+    display: inline-block;
+}
+
+.drive-dotview-container a {
+    color: #2e68f8;
+    background: transparent;
+    outline: none;
+    transition: color .3s ease;
+}
+
+.dotview-logo .dotview-header-icon[data-v-4d7f73a1] {
+    vertical-align: top;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background: url(../img/logoico.png) 50% no-repeat;
+    background-size: contain;
+}
+
+.dotview-logo .dotview-header-info[data-v-4d7f73a1] {
+    vertical-align: top;
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+    line-height: 40px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.dotview-error-wrapper[data-v-dfddda2c] {
+    height: 100%;
+    padding-top: 125px;
+    text-align: center;
+}
+
+.error-container[data-v-4a1966b9] {
+    text-align: center;
+}
+
+.error-container .error-logo[data-v-4a1966b9] {
+    width: 100px;
+    height: 100px;
+}
+
+.error-container h1[data-v-4a1966b9] {
+    margin-top: 28px;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #353535;
+    font-weight: 400;
+}
+
+.error-container p[data-v-4a1966b9] {
+    margin: 0 auto;
+    width: 80%;
+    color: #979797;
+    display: block;
+    line-height: 14px;
+    height: 14px;
+}
+
+.dotview-error-wrapper .link-index[data-v-dfddda2c] {
+    display: inline-block;
+    margin-top: 40px;
+    cursor: pointer;
+    color: #2e68f8;
+}
