@@ -1,64 +1,118 @@
-/*
- * 弹出DIV层
-*/
-function showDiv()
-{
-var Idiv     = document.getElementById("Idiv");
-var mou_head = document.getElementById('mou_head');
-Idiv.style.display = "block";
-//以下部分要将弹出层居中显示
-Idiv.style.left=(document.documentElement.clientWidth-Idiv.clientWidth)/2+document.documentElement.scrollLeft+"px";
-Idiv.style.top =(document.documentElement.clientHeight-Idiv.clientHeight)/2+document.documentElement.scrollTop-50+"px";
- 
-//以下部分使整个页面至灰不可点击
-var procbg = document.createElement("div"); //首先创建一个div
-procbg.setAttribute("id","mybg"); //定义该div的id
-procbg.style.background = "#000000";
-procbg.style.width = "100%";
-procbg.style.height = "100%";
-procbg.style.position = "fixed";
-procbg.style.top = "0";
-procbg.style.left = "0";
-procbg.style.zIndex = "500";
-procbg.style.opacity = "0.6";
-procbg.style.filter = "Alpha(opacity=70)";
-//背景层加入页面
-document.body.appendChild(procbg);
-document.body.style.overflow = "hidden"; //取消滚动条
- 
-//以下部分实现弹出层的拖拽效果
-var posX;
-var posY;
-mou_head.onmousedown=function(e)
-{
-if(!e) e = window.event; //IE
-posX = e.clientX - parseInt(Idiv.style.left);
-posY = e.clientY - parseInt(Idiv.style.top);
-document.onmousemove = mousemove;
-}
-document.onmouseup = function()
-{
-document.onmousemove = null;
-}
-function mousemove(ev)
-{
-if(ev==null) ev = window.event;//IE
-Idiv.style.left = (ev.clientX - posX) + "px";
-Idiv.style.top = (ev.clientY - posY) + "px";
-}
-}
-function closeDiv() //关闭弹出层
-{
-var Idiv=document.getElementById("Idiv");
-Idiv.style.display="none";
-document.body.style.overflow = "auto"; //恢复页面滚动条
-var body = document.getElementsByTagName("body");
-var mybg = document.getElementById("mybg");
-body[0].removeChild(mybg);
-}
-<!--弹出层开始-->
-<div id="Idiv" style="display:none; position:absolute; z-index:1000; background:#67a3d9;">
-    <div id="mou_head" style="width="100px; height=10px;z-index:1001; position:absolute;">这个是用来实现拖层</div>
-    <input type="button" value="关闭" onclick="closeDiv();" />
-</div>
-<!--结束-->
+var Floater = (function(){
+ var me = Class.create();
+ me.prototype = {
+     initialize: function(options) {
+         this._fS = BindAsEventListener(this, this.addjustPosition);
+         this.setOptions(options);
+     },
+     setOptions: function(options) {
+         this.options = options || {};
+         this._id = options.id;
+         this._mark = 'mark';
+     },
+     show: function(html,options) {
+         options = options || {};
+         if(!this._cover){
+             this._createCover();
+         }
+         if(!this._floater){
+             this._createFloater(html);
+         }
+         if(options.saveOpt){
+             this._saveOption = options.saveOpt;
+             this.bindSaveEvent();
+         }
+         this._bindScrollEvent();
+         this.addjustPosition();
+         this._floater.style.display = '';
+         this._cover.style.display = '';
+         this.isShow = true;
+     },
+     insert: function(html,opts,att){
+         var _e = document.createElement("div"), _t;
+         _e.innerHTML = html;
+         for(var k in opts){
+             _e[k] = opts[k];
+         }
+         _t = this._floater.querySelector('['+att+']');
+         if(_t){
+             _t.appendChild(_e);
+         }
+     },
+     getFloater: function(){
+         if(this._floater){
+             return this._floater;
+         }
+     },
+     //遮罩层
+     _createCover: function() {
+         var newMask = document.createElement("div");
+         newMask.id = this._mark;
+         newMask.style.position = "absolute";
+         newMask.style.zIndex = "100";
+         _scrollWidth = Math.max(document.body.scrollWidth,document.documentElement.scrollWidth);
+         _scrollHeight = Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);
+         newMask.style.width = _scrollWidth + "px";
+         newMask.style.height = _scrollHeight + "px";
+         newMask.style.top = "0px";
+         newMask.style.left = "0px";
+         newMask.style.background = "#000";
+         newMask.style.filter = "alpha(opacity=50)";
+         newMask.style.opacity = "0.50";
+         newMask.style.display = 'none';
+         document.body.appendChild(newMask);
+         this._cover = newMask;
+     },
+     //新弹出层
+     _createFloater: function(html) {
+         var newDiv = document.createElement("div");
+         newDiv.id = this._id;
+         newDiv.style.position = "absolute";
+         newDiv.style.zIndex = "9999";
+         newDivWidth = 400;
+         newDivHeight = 200;
+         newDiv.style.width = newDivWidth + "px";
+         newDiv.style.height = newDivHeight + "px";
+         newDiv.style.top = (document.body.scrollTop + document.body.clientHeight/2 - newDivHeight/2) + "px";
+         newDiv.style.left = (document.body.scrollLeft + document.body.clientWidth/2 - newDivWidth/2) + "px";
+         newDiv.style.padding = "5px";
+         newDiv.style.display = 'none';
+         newDiv.innerHTML = html;
+         document.body.appendChild(newDiv);
+         this._floater = newDiv;
+     },
+     //弹出层滚动居中
+     addjustPosition: function() {
+         this._floater.style.top = (document.body.scrollTop + document.body.clientHeight/2 - newDivHeight/2) + "px";
+         this._floater.style.left = (document.body.scrollLeft + document.body.clientWidth/2 - newDivWidth/2) + "px";
+     },
+     bindSaveEvent: function() {
+         this._saveElem = this._floater.querySelector('['+this._saveOption.elem+']');
+         if(this._saveElem){
+             addEventHandler(this._saveElem, "click", this._saveOption.handler);
+         }
+     },
+     _bindScrollEvent: function() {
+         addEventHandler(window, "scroll", this._fS);
+     },
+     hide: function() {
+         this.isShow = false;
+         this.destory();
+     },
+     destory: function() {
+         removeEventHandler(window, "scroll", this._fS);
+         if(this._saveElem){
+             removeEventHandler(this._saveElem, "click", this._saveOption.handler);
+         }
+         if (this._cover){
+             document.body.removeChild(this._cover);
+         }
+         if (this._floater){
+             document.body.removeChild(this._floater);
+         }
+         this._cover = null;
+         this._floater = null;
+     }
+ };
+ return me;
+ })();
