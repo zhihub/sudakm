@@ -1,36 +1,18 @@
-#idzdy1 {
-    display: none;
-}
-
 .fgg5 #idtop {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url(//sudakm.com/yspan/img/bg1.png);
 }
 
-.fgg5 .ta_wjq ｛
-    display: none;
-    height: 44px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1010;
-    background: transparent url(//exp.bdstatic.com/static/article/widget/top-nav-bar/img/top-nav-bg_a47c4ce.png) 0 0 repeat-x;
-｝
+#menuList .ml {
+    font-size: 15px !important;
+}
+#menuList .ml {
+    text-shadow: rgb(0, 0, 0) 0px 0px 4px, rgb(0, 0, 0) 0px 0px 3px, rgb(0, 0, 0) 0px 0px 2px, rgb(0, 0, 0) 0px 0px 1px;
+    color: rgb(255, 255, 255) !important;
+}
 
-.ta_wjq ｛
-    display: none;
-    height: 44px;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1010;
-    background: transparent url(//exp.bdstatic.com/static/article/widget/top-nav-bar/img/top-nav-bg_a47c4ce.png) 0 0 repeat-x;!important
-｝
-
-#dzx ｛
-    background-color: #fff;
-    border-radius: 2px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,.05);!important
-｝
+#menuList li.gml img.bjtb, a.ml, #menuList li.gml label {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 26px;
+    padding: 3px;
+}
